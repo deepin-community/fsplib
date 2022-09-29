@@ -1,0 +1,119 @@
+fsplib (0.14-5) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Archive.
+  * Remove obsolete field Contact from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ أحمد المحمودي (Ahmed El-Mahmoudy) ]
+  * Do not run test program, as it requires a running fspd which isn't available
+    (Closes: #958842)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 09 May 2020 13:36:33 +0200
+
+fsplib (0.14-4) unstable; urgency=medium
+
+  * Revert back build autopkgtest
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Thu, 09 Apr 2020 21:25:16 +0200
+
+fsplib (0.14-3) unstable; urgency=medium
+
+  * Remove debian/tests, since the only test is disabled anyways
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 30 Mar 2020 18:47:20 +0200
+
+fsplib (0.14-2) unstable; urgency=medium
+
+  * Remove site_scons/__pycache__  directory during clean (Closes: #952267)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 30 Mar 2020 18:17:43 +0200
+
+fsplib (0.14-1) unstable; urgency=medium
+
+  * New upstream version 0.14
+  * d/clean: remove compiled python scripts
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Wed, 15 Jan 2020 22:06:13 +0200
+
+fsplib (0.11-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/watch: Use https protocol
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use versioned copyright format URI.
+  * Update copyright file header to use current field names (Name =>
+    Upstream-Name, Maintainer => Upstream-Contact)
+  * Bump debhelper from deprecated 8 to 12.
+  * Set debhelper-compat version in Build-Depends.
+
+  [ أحمد المحمودي (Ahmed El-Mahmoudy) ]
+  d/control:
+    + Update standards version to 4.4.1
+    + Add Rules-Requires-Root=no
+  * Add build depends package field to symbols file
+  * d/copyright:
+    + Update copyright years
+    + Update my email address
+    + Set upstream license name to MIT
+  * Add upstream metadata
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 13 Jan 2020 10:20:51 +0100
+
+fsplib (0.11-2) unstable; urgency=low
+
+  * Switch to 3.0 (quilt) source format
+  * debian/compat: bumped compat level to 8
+  * debian/control:
+    + Added Vcs-* fields.
+    + Bumped Standards-Version to 3.9.2, no changes needed.
+    + Build-Depend on debhelper >= 8
+    + Added ${misc:Depends} to libfsplib-dev Depends field.
+  * debian/rules: simplified rules file
+  * debian/control: Updated my email address
+  * Remove debian/*dirs
+  * debian/copyright:
+    + Updated copyright years
+    + Make copyright file DEP-5 compliant
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 09 Jul 2011 11:32:15 +0200
+
+fsplib (0.11-1) unstable; urgency=low
+
+  * New upstream release
+
+  * debian/control:
+    + Bumped Standards-Version to 3.8.1, no changes needed.
+    + Removed duplicated Section field from libfsplib0 target.
+  * debian/rules: install ChangeLog as upstream changelog.
+  * Added debian/docs
+  * Added debian/libfsplib0.symbols
+  * debian/copyright:
+    + Converted to machine readable format.
+    + Updated packaging copyright years.
+    + Upgraded packaging license to GPL-3+
+  * Build using Scons instead of autotools, since upstream removed autoconf
+    support:
+    + debian/control: Build-Depend on scons instead of autoconf, automake,
+      libtool.
+    + debian/rules:
+      - Remove configure* targets.
+      - Use scons instead of $(MAKE)
+  * Added debian/*links to create symlinks for the shared library.
+  * debian/libfsplib-dev.install: Removed *.la entry since it is not built
+    anymore.
+  * debian/watch:
+    + Removed comments.
+    + Appended debian uupdate.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 13 Jun 2009 21:32:45 +0300
+
+fsplib (0.9-1) unstable; urgency=low
+
+  * Initial release. (Closes: #467259)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 24 Feb 2008 12:33:59 +0200

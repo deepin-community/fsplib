@@ -1,0 +1,3 @@
+Tests: build
+Depends: libfsplib-dev, build-essential
+Restrictions: isolation-container

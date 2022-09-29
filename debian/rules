@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	scons enable-shared=1 prefix=/usr build
+
+override_dh_auto_clean:
+	scons -c enable-shared=1
+	rm -rf .scon* config.log site_scons/__pycache__
+
+override_dh_auto_install:
+	scons enable-shared=1 prefix=$(CURDIR)/debian/tmp/usr install
+
+override_dh_install:
+	dh_install --sourcedir=debian/tmp

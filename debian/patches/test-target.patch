@@ -1,0 +1,28 @@
+Description: Add test target
+Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
+Bug: https://sourceforge.net/p/fsp/tickets/9/
+Forwarded: https://sourceforge.net/p/fsp/tickets/9/attachment/test-target.patch
+
+---
+ SConscript | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/SConscript b/SConscript
+index b870cca..bb657c8 100644
+--- a/SConscript
++++ b/SConscript
+@@ -19,10 +19,12 @@ if SHARED:
+ 
+ #Build test program
+ test=env.Program(target = 'test', source = ['test.c', libfsp])
+-env.Alias("build",test)
++test_alias = env.Alias("test", [test], test[0].abspath)
++AlwaysBuild(test_alias)
+ if SHARED:
+     testshared=env.Program(target = 'test-shared', source = ['test.c', libfspshared])
+-    env.Alias("build",testshared)
++    test_alias = env.Alias("test", [testshared], testshared[0].abspath)
++    AlwaysBuild(test_alias)
+ 
+ # *************** Targets ****************
+ 

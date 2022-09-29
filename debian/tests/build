@@ -1,0 +1,16 @@
+#!/bin/sh
+# autopkgtest check: Build and run a program against fsplib, to verify that the
+# headers file are installed correctly
+
+set -e
+
+SRCDIR=$PWD
+WORKDIR=$(mktemp -d)
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+cd $WORKDIR
+
+gcc -o fsptest $SRCDIR/test.c -lfsplib
+echo "build: OK"
+[ -x fsptest ]
+#./fsptest
+#echo "run: OK"

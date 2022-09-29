@@ -1,0 +1,31 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: http://fsp.sourceforge.net
+Upstream-Name: fsplib
+Upstream-Contact: Radim `HSN` Kolar <hsn@users.sourceforge.net>
+
+Files: *
+Copyright: 2003-2006,2009, Radim `HSN` Kolar <hsn@users.sourceforge.net>
+License: MIT
+ You may copy or modify this file in any manner you wish, provided
+ that this notice is always included, and that you hold the author
+ harmless for any loss or damage resulting from the installation or
+ use of this software.
+
+Files: debian/*
+Copyright: 2008-2011,2018,2020, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU GPL3 licenses
+ can be found at `/usr/share/common-licenses/GPL-3'.
